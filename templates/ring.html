@@ -1,0 +1,43 @@
+{% macro render_ring(value, max_value=10) %}
+{% set percent = (value / max_value) * 100 %}
+{% set radius = 80 %}
+{% set circumference = 2 * 3.1416 * radius %}
+{% set offset = circumference * (1 - percent / 100) %}
+
+{% if value >= 8 %}
+    {% set color = '#28a745' %}
+{% elif value >= 6 %}
+    {% set color = '#ffc107' %}
+{% else %}
+    {% set color = '#dc3545' %}
+{% endif %}
+
+<svg class="sgpa-ring" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="{{ radius }}"
+            stroke="#e9ecef"
+            stroke-width="17"
+            fill="none"/>
+    <circle cx="100" cy="100" r="{{ radius }}"
+            stroke="{{ color }}"
+            stroke-width="17"
+            fill="none"
+            stroke-dasharray="{{ circumference }}"
+            stroke-dashoffset="{{ circumference }}"
+            stroke-linecap="round"
+            transform="rotate(-90 100 100)"
+            class="progress-circle"/>
+    <text x="100" y="100" class="sgpa-text">{{ value }}</text>
+</svg>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const circle = document.querySelector(".progress-circle");
+    if (circle) {
+        const finalOffset = parseFloat("{{ offset }}");
+        setTimeout(() => {
+            circle.style.strokeDashoffset = finalOffset;
+        }, 100);
+    }
+});
+</script>
+{% endmacro %}

@@ -1,0 +1,69 @@
+.sgpa-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.sgpa-left {
+    flex: 2;
+}
+
+.sgpa-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.sgpa-ring {
+    width: 200px;
+    height: 200px;
+}
+
+.sgpa-text {
+    font-size: 2.3rem;
+    font-weight: 600;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.progress-circle {
+    transition: stroke-dashoffset 1.2s ease-out, stroke 0.5s ease;
+}
+
+.cgpa-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.cgpa-left {
+    flex: 0 0 40%;
+}
+
+.cgpa-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.simulate-left {
+    flex: 0 0 400px;
+}
+
+.simulate-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sgpa-slider {
+    width: 100%;
+}
+

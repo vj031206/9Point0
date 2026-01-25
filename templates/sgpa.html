@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block head %}
+    <title>GPA Calculator</title>
+{% endblock %}
+
+{% block body %}
+<div class="container my-4 sgpa-wrapper">
+
+    <div class="sgpa-left">
+            <form action="/sgpa" method="POST">
+                <table class="table" id="sgpa-table">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Grade</th>
+                            <th>Credits</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in range(courses|length if courses else 5) %}
+                        <tr>
+                            <td>
+                                <input type="text" name="course[]" class="form-control" placeholder="Course Name" value="{{ courses[i] if courses }}">
+                            </td>
+                            <td>
+                                <select name="grade[]" class="form-select">
+                                    <option value="">Select a grade</option>
+                                    {% for g in ['A+','A','B','C','D','F'] %}
+                                        <option value="{{ g }}"
+                                        {% if grades and grades[i] == g %}selected{% endif %}>
+                                        {{ g }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" value="{{ credits[i] if credits }}" placeholder="Credits"  name="credits[]" class="form-control" min="1" step="1">
+                            </td>
+                            <td>
+                                <button type="button" onclick="removeRow(this)" class="btn-close" aria-label="Close"></button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            <td><button type="button" onclick="addRow()" class="btn btn-outline-secondary btn-sm">+</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </form>
+
+    </div>
+
+    {% from 'ring.html' import render_ring %}
+
+    <div class="sgpa-right">
+        {% if sgpa is not none %}
+            {{ render_ring(sgpa) }}
+        {% endif %}
+    </div>
+    
+</div>
+{% endblock %}
