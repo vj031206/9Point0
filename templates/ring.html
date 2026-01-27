@@ -1,20 +1,32 @@
-{% macro render_ring(id="cgpa-ring", max_value=10) %}
-<svg class="sgpa-ring" viewBox="0 0 200 200" data-max="{{ max_value }}">
-    <circle cx="100" cy="100" r="80"
+{% macro render_ring(value=0, max_value=10, ring_id="ring") %}
+{% set radius = 80 %}
+{% set circumference = 2 * 3.1416 * radius %}
+{% set percent = value / max_value %}
+{% set offset = circumference * (1 - percent) %}
+
+<svg class="sgpa-ring"
+     id="{{ ring_id }}"
+     viewBox="0 0 200 200"
+     data-max="{{ max_value }}"
+     data-circumference="{{ circumference }}">
+
+    <circle cx="100" cy="100" r="{{ radius }}"
             stroke="#e9ecef"
             stroke-width="17"
             fill="none"/>
 
-    <circle cx="100" cy="100" r="80"
+    <circle cx="100" cy="100" r="{{ radius }}"
             stroke="#28a745"
             stroke-width="17"
             fill="none"
-            stroke-dasharray="502"
-            stroke-dashoffset="502"
+            stroke-dasharray="{{ circumference }}"
+            stroke-dashoffset="{{ offset }}"
             stroke-linecap="round"
             transform="rotate(-90 100 100)"
             class="progress-circle"/>
 
-    <text x="100" y="100" class="sgpa-text">0.00</text>
+    <text x="100" y="100" class="sgpa-text">
+        {{ "%.2f"|format(value) }}
+    </text>
 </svg>
 {% endmacro %}

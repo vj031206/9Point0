@@ -50,8 +50,9 @@
     {% from 'ring.html' import render_ring %}
 
     <div class="cgpa-right">
-        {{ render_ring() }}
+        {{ render_ring(cgpa or 0, 10, "cgpa-ring") }}
     </div>
+
 
 </div>
 {% endblock %}
