@@ -4,8 +4,8 @@
 {% endblock %}
 
 {% block body %}
+<h1 class="container my-4">SGPA Calculator</h1>
 <div class="container my-4 sgpa-wrapper">
-
     <div class="sgpa-left">
             <form action="/sgpa" method="POST">
                 <table class="table" id="sgpa-table">
@@ -58,6 +58,6 @@
             {{ render_ring(sgpa) }}
         {% endif %}
     </div>
-    
+
 </div>
 {% endblock %}

@@ -4,10 +4,11 @@
     align-items: flex-start;
     padding-top: 50px;
     padding-left: 50px;
+    margin-left: 70px;
 }
 
 .sgpa-left {
-    flex: 2;
+    flex: 1.7;
 }
 
 .sgpa-right {
@@ -45,6 +46,16 @@
     flex: 0 0 40%;
 }
 
+.sem-cell{
+    width: 90px;
+    margin-right: 40px;
+}
+
+.credits-cell{
+    width: 120px;
+    padding: auto;
+}
+
 .cgpa-right {
     flex: 1;
     display: flex;
@@ -63,7 +74,23 @@
     align-items: center;
 }
 
-.sgpa-slider {
-    width: 100%;
+.sgpa-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
+
+.sgpa-slider {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.sgpa-input {
+    width: 90px;
+    text-align: center;
+}
+
+
+
 

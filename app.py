@@ -53,9 +53,5 @@ def cgpa():
         sgpa_list=sgpa_list
     )
 
-@app.route('/simulate')
-def simulate():
-    return render_template('simulate.html')
-
 if __name__ == '__main__':
     app.run(debug=True)

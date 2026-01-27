@@ -4,13 +4,62 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container my-3">
-        <h1>Welcome to 9Point0</h1>
-        <p>Your ultimate GPA and CGPA Calculator and Simulator</p>
+    <div class="container my-4">
+        <h1 class="fw-bold">9Point0</h1>
+        <p class="text-muted">
+            Plan, simulate, and understand your GPA — not just calculate it.
+        </p>
 
-        <a href="sgpa.html">Calculate GPA</a>
-        <a href="cgpa.html">Calculate CGPA</a>
-        <a href="simulate.html">Simulate GPA</a>
+    <div class="row g-4 mt-4">
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">SGPA Calculator</h5>
+                    <p class="card-text">
+                        Calculate semester GPA from courses, grades & credits.
+                    </p>
+                    <a href="/sgpa" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">CGPA Calculator</h5>
+                    <p class="card-text">
+                        Calculate and simulate CGPA of all semesters completed.
+                    </p>
+                    <a href="/cgpa" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+        <div class="row mt-5 text-center">
+            <div class="col">
+                <h6 class="text-muted">Latest SGPA</h6>
+                <h3>8.42</h3>
+            </div>
+            <div class="col">
+                <h6 class="text-muted">Current CGPA</h6>
+                <h3>8.10</h3>
+            </div>
+            <div class="col">
+                <h6 class="text-muted">Target CGPA</h6>
+                <h3>8.5</h3>
+            </div>
+        </div>
+
+        <h4 class="mt-5">How CGPA is calculated</h4>
+        <ul class="text-muted">
+            <li>Each semester SGPA is weighted by its credits</li>
+            <li>Higher credit semesters matter more</li>
+            <li>One bad semester can be fixed with planning</li>
+        </ul>
     </div>
 
 {% endblock %}
