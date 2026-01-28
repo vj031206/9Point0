@@ -24,7 +24,7 @@
                             </td>
                             <td>
                                 <select name="grade[]" class="form-select">
-                                    <option value="">Select a grade</option>
+                                    <option value="">Grade</option>
                                     {% for g in ['A+','A','B','C','D','F'] %}
                                         <option value="{{ g }}"
                                         {% if grades and grades[i] == g %}selected{% endif %}>
