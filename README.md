@@ -46,12 +46,15 @@ The project demonstrates full-stack web development using **Python**, **Flask**,
 ## Screenshots
 
 **Dashboard**
+
 <img width="1855" height="902" alt="Screenshot 2026-02-06 033616" src="https://github.com/user-attachments/assets/326b8159-2719-4cf9-90a2-5da64c3c93da" />
 
 **SGPA Page**
+
 <img width="1873" height="898" alt="Screenshot 2026-02-06 033714" src="https://github.com/user-attachments/assets/a1472bc6-92c6-44a5-8c64-a39b2e1bcd20" />
 
 **CGPA Page**
+
 <img width="1873" height="886" alt="Screenshot 2026-02-06 033737" src="https://github.com/user-attachments/assets/788bbea6-68bb-4c27-808e-0137cf95e36c" />
 
 ---
@@ -113,5 +116,6 @@ python app.py
 - **YouTube Demo:** https://youtu.be/pj6gQF0lzzY
 - **GitHub Repo:** https://github.com/vj031206/9Point0
 
-License
+## License
+
 This project is open-source under the MIT License.
