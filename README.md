@@ -73,44 +73,47 @@ The project demonstrates full-stack web development using **Python**, **Flask**,
 ```bash
 git clone https://github.com/vj031206/9Point0.git
 cd 9Point0
-Create a virtual environment (optional)
+```
 
+2. **Create a virtual environment (optional)**
+```bash
 python -m venv venv
 source venv/bin/activate      # Linux / Mac
 venv\Scripts\activate         # Windows
-Install dependencies
+```
 
+3. **Install dependencies**
+```bash
 pip install -r requirements.txt
-Run the Flask app
+```
 
+4. **Run the Flask app**
+```bash
 python app.py
-Open in browser
-Visit http://127.0.0.1:5000 to use the app.
+```
 
-Usage
-Enter semester and course details (course name, credits, grade).
+5. **Open in browser**
+   - Visit http://127.0.0.1:5000 to use the app
 
-Click Calculate GPA to view semester GPA.
+## Usage
 
-Add more semesters to compute cumulative CGPA.
+1. Enter semester and course details (course name, credits, grade).
+2. Click **Calculate GPA** to view semester GPA.
+3. Add more semesters to compute cumulative CGPA.
+4. Adjust grades/credits in simulation mode to explore different scenarios.
 
-Adjust grades/credits in simulation mode to explore different scenarios.
+## Future Plans
 
-Future Plans
-Fully mobile-responsive layout.
+- Fully mobile-responsive layout
+- Interactive dashboard with charts/statistics
+- Export data in CSV/PDF format
+- Persistent user accounts to save GPA/CGPA history
 
-Interactive dashboard with charts/statistics.
+## Links
 
-Export data in CSV/PDF format.
-
-Persistent user accounts to save GPA/CGPA history.
-
-Links
-Live Demo: https://9-point0.vercel.app
-
-YouTube Demo: https://youtu.be/pj6gQF0lzzY
-
-GitHub Repo: https://github.com/vj031206/9Point0
+- **Live Demo:** https://9-point0.vercel.app
+- **YouTube Demo:** https://youtu.be/pj6gQF0lzzY
+- **GitHub Repo:** https://github.com/vj031206/9Point0
 
 License
 This project is open-source under the MIT License.
