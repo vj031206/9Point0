@@ -45,16 +45,14 @@ The project demonstrates full-stack web development using **Python**, **Flask**,
 
 ## Screenshots
 
-**Homepage**
-![Homepage](path/to/homepage.png)
+**Dashboard**
+<img width="1855" height="902" alt="Screenshot 2026-02-06 033616" src="https://github.com/user-attachments/assets/326b8159-2719-4cf9-90a2-5da64c3c93da" />
 
-**GPA Input Page**
-![Input Page](path/to/input.png)
+**SGPA Page**
+<img width="1873" height="898" alt="Screenshot 2026-02-06 033714" src="https://github.com/user-attachments/assets/a1472bc6-92c6-44a5-8c64-a39b2e1bcd20" />
 
-**Results Page**
-![Results Page](path/to/results.png)
-
-*Add more screenshots as needed.*
+**CGPA Page**
+<img width="1873" height="886" alt="Screenshot 2026-02-06 033737" src="https://github.com/user-attachments/assets/788bbea6-68bb-4c27-808e-0137cf95e36c" />
 
 ---
 
