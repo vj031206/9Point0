@@ -8,6 +8,7 @@
 <div class="container my-4 cgpa-wrapper d-flex align-items-center gap-4">
     <div class="cgpa-left flex-grow-1">
         <form action="/cgpa" method="POST">
+            <div class="table-responsive">
             <table class="table" id="cgpa-table">
                 <thead>
                     <tr>
@@ -21,7 +22,7 @@
                     <tr>
                         <td class="sem-cell">Sem {{ i + 1 }}</td>
                         <td class="credits-cell">
-                            <input type="number" name="credits[]" class="form-control" min="1" step="1" value="{{ credits[i] if credits }}">
+                            <input type="number" name="credits[]" class="form-control credits-input" min="1" step="1" value="{{ credits[i] if credits }}">
                         </td>
                         <td class="sgpa-cell">
                             <input type="range"
@@ -44,6 +45,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+            </div>
         </form>
     </div>
 

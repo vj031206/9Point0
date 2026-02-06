@@ -3,8 +3,6 @@
     gap: 2rem;
     align-items: flex-start;
     padding-top: 50px;
-    padding-left: 50px;
-    margin-left: 70px;
 }
 
 .sgpa-left {
@@ -121,6 +119,199 @@ footer {
 
 .fa:hover {
     opacity: 0.7;
+}
+
+
+@media (max-width: 767.98px) {
+    .sgpa-wrapper,
+    .cgpa-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .sgpa-left, .cgpa-left,
+    .sgpa-right, .cgpa-right {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .sgpa-right, .cgpa-right {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .sgpa-cell {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .sgpa-slider {
+        width: 100%;
+    }
+
+    .sgpa-input,
+    .cgpa-left .form-control,
+    .credits-cell input {
+        width: auto;
+        min-width: 64px;
+        max-width: 60%;
+        box-sizing: border-box;
+    }
+
+    .sgpa-input,
+    .credits-input,
+    .table td .form-control,
+    .table td .form-select {
+        height: 36px;
+        padding: 6px 8px;
+        line-height: 1.1;
+    }
+
+    .table tbody tr {
+        min-height: 44px;
+        align-items: center;
+    }
+
+    table.table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table tbody {
+        display: block;
+    }
+
+    .table tbody tr {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .sem-cell {
+        flex: 0 0 60px;
+        width: 60px;
+        font-weight: 600;
+    }
+
+    .credits-cell {
+        flex: 0 0 70px;
+        width: 70px;
+    }
+
+    .credits-cell input, .credits-input {
+        width: 60px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .sgpa-cell {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        min-width: 0;
+    }
+
+    .sgpa-slider {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .sgpa-input {
+        width: 60px;
+        flex: 0 0 60px;
+    }
+
+    .table td input {
+        white-space: nowrap;
+        overflow: visible;
+    }
+
+    h1.container.my-4 {
+        font-size: 1.25rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .btn {
+        padding: 0.45rem 0.75rem;
+    }
+
+    .sgpa-ring, .cgpa-right svg {
+        width: 160px;
+        height: 160px;
+    }
+
+    #cgpa-table tbody tr {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    #cgpa-table .sem-cell {
+        flex: 0 0 60px;
+        width: 60px;
+    }
+
+    #cgpa-table .credits-cell {
+        flex: 0 0 70px;
+        width: 70px;
+    }
+
+    #cgpa-table .credits-cell input, #cgpa-table .credits-input {
+        width: 60px;
+        box-sizing: border-box;
+    }
+
+    #cgpa-table .sgpa-cell {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        min-width: 0;
+    }
+
+    #cgpa-table .sgpa-slider {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    #cgpa-table .sgpa-input {
+        width: 60px;
+        flex: 0 0 60px;
+    }
+}
+
+@media (max-width: 420px) {
+    .sgpa-input,
+    .credits-cell input,
+    .credits-input {
+        width: auto;
+        max-width: 140px;
+        height: 34px;
+        padding: 5px 8px;
+    }
+
+    .sgpa-ring, .cgpa-right svg {
+        width: 140px;
+        height: 140px;
+    }
 }
 
 

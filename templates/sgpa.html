@@ -8,6 +8,7 @@
 <div class="container my-4 sgpa-wrapper">
     <div class="sgpa-left">
             <form action="/sgpa" method="POST">
+                <div class="table-responsive">
                 <table class="table" id="sgpa-table">
                     <thead>
                         <tr>
@@ -34,7 +35,7 @@
                                 </select>
                             </td>
                             <td>
-                                <input type="number" value="{{ credits[i] if credits }}" placeholder="Credits"  name="credits[]" class="form-control" min="1" step="1">
+                                <input type="number" value="{{ credits[i] if credits }}" placeholder="Credits"  name="credits[]" class="form-control credits-input" min="1" step="1">
                             </td>
                             <td>
                                 <button type="button" onclick="removeRow(this)" class="btn-close" aria-label="Close"></button>
@@ -46,6 +47,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
                 <button type="submit" class="btn btn-primary">Calculate</button>
             </form>
 
